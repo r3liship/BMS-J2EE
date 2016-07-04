@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="wang.relish.bms.entity.Record" table="record" schema="" catalog="bms">
+        <id name="id">
+            <column name="id" sql-type="int unsigned(10)"/>
+        </id>
+        <property name="adminId">
+            <column name="admin_id" sql-type="int unsigned(10)"/>
+        </property>
+        <property name="userId">
+            <column name="user_id" sql-type="int unsigned(10)"/>
+        </property>
+        <property name="bookId">
+            <column name="book_id" sql-type="int unsigned(10)"/>
+        </property>
+        <property name="type">
+            <column name="type" sql-type="int unsigned(10)"/>
+        </property>
+        <property name="borrowTime">
+            <column name="borrow_time" sql-type="datetime(19)" not-null="true"/>
+        </property>
+        <property name="returnTime">
+            <column name="return_time" sql-type="datetime(19)" not-null="true"/>
+        </property>
+
+
+    </class>
+</hibernate-mapping>
